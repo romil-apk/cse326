@@ -1,0 +1,1688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Startup Pitch Deck Demo Day Investor Registration and Deal System - Cohort Winter 2026. Pitch showcase, confidential decks, financial models, and accredited investor syndicate deal room.">
+  <title>VenturePulse // Demo Day & Investor Deal System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <div class="brand-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+          </svg>
+        </div>
+        <div class="brand-text">
+          VENTURE<span>PULSE</span>
+        </div>
+      </a>
+
+      <div class="batch-pill">
+        <span class="pulse-dot"></span>
+        <span>DEMO DAY W'26 LIVE</span>
+      </div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#showcase" class="nav-link">Startup Showcase</a></li>
+          <li><a href="#data-gate" class="nav-link">Confidential Vault</a></li>
+          <li><a href="#investor-registration" class="nav-link">Investor Registration</a></li>
+          <li><a href="#faq" class="nav-link">Diligence FAQ</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#data-gate" class="btn btn-sm btn-outline">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          Data Room
+        </a>
+        <a href="#investor-registration" class="btn btn-sm btn-primary">
+          Register &amp; Invest
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION WITH REAL-TIME DEMO DAY METRICS
+       ========================================================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-badge-wrap">
+        <span class="hero-tag">Venture Cohort '26</span>
+        <span class="hero-badge-divider"></span>
+        <span class="hero-badge-text">Graduating 10 Elite Startups &bull; $16.4M Aggregate Allocation</span>
+      </div>
+
+      <h1 class="hero-title">
+        Startup Pitch Deck Demo Day &amp;<br>
+        <em>Investor Deal Allocation System</em>
+      </h1>
+
+      <p class="hero-subtitle">
+        Access institutional-grade pitch decks, live 3-year financial modelers, and syndicate deal terms. Exclusively reserved for accredited angels, family offices, and institutional venture funds under SEC Reg D 506(c).
+      </p>
+
+      <div class="hero-actions" style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="#showcase" class="btn btn-primary">
+          Explore Graduating Startups
+        </a>
+        <a href="#investor-registration" class="btn btn-outline">
+          Request Accredited Access &amp; NDA
+        </a>
+      </div>
+
+      <!-- Quick Platform Stats -->
+      <div class="hero-stats-row">
+        <div class="stat-box">
+          <div class="stat-val">$16.4M</div>
+          <div class="stat-label">Total Funding Ask</div>
+          <div class="stat-sub">68% allocated in soft circles</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">$84.2K</div>
+          <div class="stat-label">Avg. Startup MRR</div>
+          <div class="stat-sub">34% MoM organic growth</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">340+</div>
+          <div class="stat-label">Accredited Investors</div>
+          <div class="stat-sub">Angels, Family Offices &amp; VCs</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-val">100%</div>
+          <div class="stat-label">Standard Diligence</div>
+          <div class="stat-sub">Audited SAFEs &amp; Modelers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STARTUP PITCH SHOWCASE & SECTOR FILTER SYSTEM (PURE HTML & CSS)
+       ========================================================================== -->
+  <section class="container" id="showcase">
+    <div class="section-header">
+      <span class="section-tag">Cohort Pitch Directory</span>
+      <h2 class="section-title">Graduating Startup Showcase</h2>
+      <p class="section-desc">
+        Filter through 10 vetted early-stage ventures categorized across FinTech, HealthTech, AI/SaaS, CleanTech, and EdTech. Inspect problem statements, verified revenue metrics, and valuation caps.
+      </p>
+    </div>
+
+    <!-- Hidden CSS Radio Inputs for Sector Filtering -->
+    <input type="radio" name="category-filter" id="cat-all" class="category-input" checked>
+    <input type="radio" name="category-filter" id="cat-fintech" class="category-input">
+    <input type="radio" name="category-filter" id="cat-healthtech" class="category-input">
+    <input type="radio" name="category-filter" id="cat-aisaap" class="category-input">
+    <input type="radio" name="category-filter" id="cat-cleantech" class="category-input">
+    <input type="radio" name="category-filter" id="cat-edtech" class="category-input">
+
+    <!-- Interactive Pure CSS Tabs Bar -->
+    <div class="filter-tabs">
+      <label for="cat-all" class="filter-label">
+        All Sectors <span class="filter-count">10</span>
+      </label>
+      <label for="cat-fintech" class="filter-label">
+        FinTech <span class="filter-count">2</span>
+      </label>
+      <label for="cat-healthtech" class="filter-label">
+        HealthTech <span class="filter-count">2</span>
+      </label>
+      <label for="cat-aisaap" class="filter-label">
+        AI / SaaS <span class="filter-count">2</span>
+      </label>
+      <label for="cat-cleantech" class="filter-label">
+        CleanTech <span class="filter-count">2</span>
+      </label>
+      <label for="cat-edtech" class="filter-label">
+        EdTech <span class="filter-count">2</span>
+      </label>
+    </div>
+
+    <!-- The Startup Cards Grid -->
+    <div class="showcase-grid">
+
+      <!-- CARD 1: FINTECH - PAYMESH -->
+      <article class="startup-card cat-fintech">
+        <div>
+          <div class="card-top">
+            <div class="brand-meta">
+              <div class="startup-logo logo-fintech">PM</div>
+              <div>
+                <h3 class="startup-name">PayMesh Global</h3>
+                <span class="startup-cohort">Batch W26 &bull; San Francisco, CA</span>
+              </div>
+            </div>
+            <span class="category-tag tag-fintech">FinTech</span>
+          </div>
+
+          <div class="problem-box">
+            <div class="problem-label">Problem Summary</div>
+            <p class="problem-text">
+              Cross-border enterprise wire settlements take 3-5 banking days and siphon 4.2% in FX spread and correspondent bank fees, locking up billions in working capital.
+            </p>
+          </div>
+
+          <div class="traction-grid">
+            <div class="traction-item">
+              <span class="traction-label">Monthly Run Rate</span>
+              <span class="traction-val">$118,500 <span class="metric-unit">MRR</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">User / TPV Growth</span>
+              <span class="traction-val">+38.5% <span class="metric-unit">MoM</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Gross Margin</span>
+              <span class="traction-val">82%</span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Active Enterprises</span>
+              <span class="traction-val">142 B2B</span>
+            </div>
+          </div>
+
+          <div class="funding-ask-bar">
+            <div class="ask-info">
+              <span class="ask-label">Funding Ask</span>
+              <span class="ask-amount">Raising $2.0M Seed</span>
+            </div>
+            <div class="ask-terms">
+              <span>$14M Post-Money</span>
+              Y-Combinator SAFE
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="#modal-paymesh" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            Pitch &amp; Modeler
+          </a>
+          <a href="#investor-registration" class="btn btn-primary btn-sm">
+            Invest in Deal
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 2: FINTECH - LEDGERPULSE -->
+      <article class="startup-card cat-fintech">
+        <div>
+          <div class="card-top">
+            <div class="brand-meta">
+              <div class="startup-logo logo-fintech">LP</div>
+              <div>
+                <h3 class="startup-name">LedgerPulse</h3>
+                <span class="startup-cohort">Batch W26 &bull; New York, NY</span>
+              </div>
+            </div>
+            <span class="category-tag tag-fintech">FinTech</span>
+          </div>
+
+          <div class="problem-box">
+            <div class="problem-label">Problem Summary</div>
+            <p class="problem-text">
+              Mid-market venture-backed startups lose millions annually in idle cash yields and spend 40+ hours per month reconciling fragmented multi-bank accounts and payroll accounts.
+            </p>
+          </div>
+
+          <div class="traction-grid">
+            <div class="traction-item">
+              <span class="traction-label">Monthly Run Rate</span>
+              <span class="traction-val">$76,200 <span class="metric-unit">MRR</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">User Growth</span>
+              <span class="traction-val">+42.0% <span class="metric-unit">MoM</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Total Deposits Monitored</span>
+              <span class="traction-val">$84M AUM</span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Net Dollar Retention</span>
+              <span class="traction-val">128%</span>
+            </div>
+          </div>
+
+          <div class="funding-ask-bar">
+            <div class="ask-info">
+              <span class="ask-label">Funding Ask</span>
+              <span class="ask-amount">Raising $1.5M Seed</span>
+            </div>
+            <div class="ask-terms">
+              <span>$11M Valuation Cap</span>
+              Discount: 20%
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="#modal-ledgerpulse" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Pitch &amp; Modeler
+          </a>
+          <a href="#investor-registration" class="btn btn-primary btn-sm">
+            Invest in Deal
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 3: HEALTHTECH - OMNIGENETICS -->
+      <article class="startup-card cat-healthtech">
+        <div>
+          <div class="card-top">
+            <div class="brand-meta">
+              <div class="startup-logo logo-health">OG</div>
+              <div>
+                <h3 class="startup-name">OmniGenetics AI</h3>
+                <span class="startup-cohort">Batch W26 &bull; Boston, MA</span>
+              </div>
+            </div>
+            <span class="category-tag tag-health">HealthTech</span>
+          </div>
+
+          <div class="problem-box">
+            <div class="problem-label">Problem Summary</div>
+            <p class="problem-text">
+              Over 70% of early solid-tumor oncology mutations go undetected by standard blood biopsies until Stage 3 due to low signal-to-noise ratios in cell-free circulating DNA.
+            </p>
+          </div>
+
+          <div class="traction-grid">
+            <div class="traction-item">
+              <span class="traction-label">Monthly Run Rate</span>
+              <span class="traction-val">$92,000 <span class="metric-unit">MRR</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Clinical Scan Growth</span>
+              <span class="traction-val">+31.4% <span class="metric-unit">MoM</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Diagnostic Accuracy</span>
+              <span class="traction-val">99.1%</span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Partner Hospitals</span>
+              <span class="traction-val">19 Centers</span>
+            </div>
+          </div>
+
+          <div class="funding-ask-bar">
+            <div class="ask-info">
+              <span class="ask-label">Funding Ask</span>
+              <span class="ask-amount">Raising $2.5M Seed+</span>
+            </div>
+            <div class="ask-terms">
+              <span>$18M Post-Money</span>
+              Priced Equity Round
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="#modal-omnigenetics" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Pitch &amp; Modeler
+          </a>
+          <a href="#investor-registration" class="btn btn-primary btn-sm">
+            Invest in Deal
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 4: HEALTHTECH - NEUROSYNC BIO -->
+      <article class="startup-card cat-healthtech">
+        <div>
+          <div class="card-top">
+            <div class="brand-meta">
+              <div class="startup-logo logo-health">NS</div>
+              <div>
+                <h3 class="startup-name">NeuroSync Bio</h3>
+                <span class="startup-cohort">Batch W26 &bull; Austin, TX</span>
+              </div>
+            </div>
+            <span class="category-tag tag-health">HealthTech</span>
+          </div>
+
+          <div class="problem-box">
+            <div class="problem-label">Problem Summary</div>
+            <p class="problem-text">
+              Neurodegenerative diseases like Parkinson's and Alzheimer's lack continuous objective biomarker tracking, delaying medication adjustments by up to 6 months between clinic visits.
+            </p>
+          </div>
+
+          <div class="traction-grid">
+            <div class="traction-item">
+              <span class="traction-label">Monthly Run Rate</span>
+              <span class="traction-val">$54,000 <span class="metric-unit">MRR</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Patient Cohort Growth</span>
+              <span class="traction-val">+29.8% <span class="metric-unit">MoM</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">FDA Status</span>
+              <span class="traction-val">510(k) Cleared</span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Active Tele-Neurologists</span>
+              <span class="traction-val">280 Providers</span>
+            </div>
+          </div>
+
+          <div class="funding-ask-bar">
+            <div class="ask-info">
+              <span class="ask-label">Funding Ask</span>
+              <span class="ask-amount">Raising $1.8M Seed</span>
+            </div>
+            <div class="ask-terms">
+              <span>$13M Valuation Cap</span>
+              SAFE (MFN Clause)
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="#modal-neurosync" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Pitch &amp; Modeler
+          </a>
+          <a href="#investor-registration" class="btn btn-primary btn-sm">
+            Invest in Deal
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 5: AI / SAAS - SYNTHETIX WORKFLOWS -->
+      <article class="startup-card cat-aisaap">
+        <div>
+          <div class="card-top">
+            <div class="brand-meta">
+              <div class="startup-logo logo-ai">SW</div>
+              <div>
+                <h3 class="startup-name">Synthetix Workflows</h3>
+                <span class="startup-cohort">Batch W26 &bull; Seattle, WA</span>
+              </div>
+            </div>
+            <span class="category-tag tag-ai">AI / SaaS</span>
+          </div>
+
+          <div class="problem-box">
+            <div class="problem-label">Problem Summary</div>
+            <p class="problem-text">
+              Regulated financial institutions and healthcare systems cannot safely deploy autonomous AI agents due to unverified hallucination risks and stringent SOC2/HIPAA audit barriers.
+            </p>
+          </div>
+
+          <div class="traction-grid">
+            <div class="traction-item">
+              <span class="traction-label">Monthly Run Rate</span>
+              <span class="traction-val">$145,000 <span class="metric-unit">MRR</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Enterprise ACV Growth</span>
+              <span class="traction-val">+46.2% <span class="metric-unit">MoM</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Annual Contract Value</span>
+              <span class="traction-val">$64K Avg.</span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Gross Margin</span>
+              <span class="traction-val">87%</span>
+            </div>
+          </div>
+
+          <div class="funding-ask-bar">
+            <div class="ask-info">
+              <span class="ask-label">Funding Ask</span>
+              <span class="ask-amount">Raising $3.0M Seed</span>
+            </div>
+            <div class="ask-terms">
+              <span>$22M Post-Money</span>
+              Lead Allocated $1.2M
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="#modal-synthetix" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Pitch &amp; Modeler
+          </a>
+          <a href="#investor-registration" class="btn btn-primary btn-sm">
+            Invest in Deal
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 6: AI / SAAS - CODEARMOR AI -->
+      <article class="startup-card cat-aisaap">
+        <div>
+          <div class="card-top">
+            <div class="brand-meta">
+              <div class="startup-logo logo-ai">CA</div>
+              <div>
+                <h3 class="startup-name">CodeArmor AI</h3>
+                <span class="startup-cohort">Batch W26 &bull; Tel Aviv &amp; SF</span>
+              </div>
+            </div>
+            <span class="category-tag tag-ai">AI / SaaS</span>
+          </div>
+
+          <div class="problem-box">
+            <div class="problem-label">Problem Summary</div>
+            <p class="problem-text">
+              Legacy static vulnerability scanners alert dev teams to 2,000+ noise tickets weekly, while 89% of zero-day vulnerabilities in containerized microservices remain unpatched for over 45 days.
+            </p>
+          </div>
+
+          <div class="traction-grid">
+            <div class="traction-item">
+              <span class="traction-label">Monthly Run Rate</span>
+              <span class="traction-val">$88,400 <span class="metric-unit">MRR</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Developer Adoption</span>
+              <span class="traction-val">+54.0% <span class="metric-unit">MoM</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Active Repos Covered</span>
+              <span class="traction-val">6,400+</span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Zero-False-Positive SLA</span>
+              <span class="traction-val">99.4%</span>
+            </div>
+          </div>
+
+          <div class="funding-ask-bar">
+            <div class="ask-info">
+              <span class="ask-label">Funding Ask</span>
+              <span class="ask-amount">Raising $1.6M Seed</span>
+            </div>
+            <div class="ask-terms">
+              <span>$12.5M Valuation Cap</span>
+              Standard SAFE
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="#modal-codearmor" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Pitch &amp; Modeler
+          </a>
+          <a href="#investor-registration" class="btn btn-primary btn-sm">
+            Invest in Deal
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 7: CLEANTECH - TERRAGRID ENERGY -->
+      <article class="startup-card cat-cleantech">
+        <div>
+          <div class="card-top">
+            <div class="brand-meta">
+              <div class="startup-logo logo-clean">TG</div>
+              <div>
+                <h3 class="startup-name">TerraGrid Energy</h3>
+                <span class="startup-cohort">Batch W26 &bull; Boulder, CO</span>
+              </div>
+            </div>
+            <span class="category-tag tag-clean">CleanTech</span>
+          </div>
+
+          <div class="problem-box">
+            <div class="problem-label">Problem Summary</div>
+            <p class="problem-text">
+              Renewable solar and wind generation curtailment wastes 18% of generated green power due to the thermal degradation limitations and cobalt supply dependencies of lithium-ion systems.
+            </p>
+          </div>
+
+          <div class="traction-grid">
+            <div class="traction-item">
+              <span class="traction-label">Monthly Run Rate</span>
+              <span class="traction-val">$65,000 <span class="metric-unit">MRR</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Pipeline Contract Growth</span>
+              <span class="traction-val">+33.0% <span class="metric-unit">MoM</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Signed Pilot LoIs</span>
+              <span class="traction-val">$4.8M LoI</span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Levelized Storage Cost</span>
+              <span class="traction-val">$0.04/kWh</span>
+            </div>
+          </div>
+
+          <div class="funding-ask-bar">
+            <div class="ask-info">
+              <span class="ask-label">Funding Ask</span>
+              <span class="ask-amount">Raising $1.75M Seed</span>
+            </div>
+            <div class="ask-terms">
+              <span>$12M Valuation Cap</span>
+              Non-Dilutive Match: $500k
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="#modal-terragrid" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Pitch &amp; Modeler
+          </a>
+          <a href="#investor-registration" class="btn btn-primary btn-sm">
+            Invest in Deal
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 8: CLEANTECH - BIOCAPTURE MATERIALS -->
+      <article class="startup-card cat-cleantech">
+        <div>
+          <div class="card-top">
+            <div class="brand-meta">
+              <div class="startup-logo logo-clean">BC</div>
+              <div>
+                <h3 class="startup-name">BioCapture Materials</h3>
+                <span class="startup-cohort">Batch W26 &bull; Chicago, IL</span>
+              </div>
+            </div>
+            <span class="category-tag tag-clean">CleanTech</span>
+          </div>
+
+          <div class="problem-box">
+            <div class="problem-label">Problem Summary</div>
+            <p class="problem-text">
+              Global manufacturing consumes 380M tons of petroleum-derived polymers yearly; existing bioplastics are either cost-prohibitive or compete with agricultural food supply chains.
+            </p>
+          </div>
+
+          <div class="traction-grid">
+            <div class="traction-item">
+              <span class="traction-label">Monthly Run Rate</span>
+              <span class="traction-val">$48,000 <span class="metric-unit">MRR</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Tonnage Order Growth</span>
+              <span class="traction-val">+27.5% <span class="metric-unit">MoM</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Commercial Offtakers</span>
+              <span class="traction-val">6 Brands</span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Net CO2 Sequestered</span>
+              <span class="traction-val">1.8 kg/kg resin</span>
+            </div>
+          </div>
+
+          <div class="funding-ask-bar">
+            <div class="ask-info">
+              <span class="ask-label">Funding Ask</span>
+              <span class="ask-amount">Raising $1.2M Seed</span>
+            </div>
+            <div class="ask-terms">
+              <span>$9M Valuation Cap</span>
+              Pre-Money SAFE
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="#modal-biocapture" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Pitch &amp; Modeler
+          </a>
+          <a href="#investor-registration" class="btn btn-primary btn-sm">
+            Invest in Deal
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 9: EDTECH - PRAXIS LABS AI -->
+      <article class="startup-card cat-edtech">
+        <div>
+          <div class="card-top">
+            <div class="brand-meta">
+              <div class="startup-logo logo-edtech">PL</div>
+              <div>
+                <h3 class="startup-name">Praxis Labs AI</h3>
+                <span class="startup-cohort">Batch W26 &bull; Toronto, Canada</span>
+              </div>
+            </div>
+            <span class="category-tag tag-edtech">EdTech</span>
+          </div>
+
+          <div class="problem-box">
+            <div class="problem-label">Problem Summary</div>
+            <p class="problem-text">
+              University graduates in engineering and medicine face an 18-month on-the-job training deficit because traditional textbook curricula fail to replicate live crisis and surgical simulations.
+            </p>
+          </div>
+
+          <div class="traction-grid">
+            <div class="traction-item">
+              <span class="traction-label">Monthly Run Rate</span>
+              <span class="traction-val">$82,000 <span class="metric-unit">MRR</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Active Student Growth</span>
+              <span class="traction-val">+35.8% <span class="metric-unit">MoM</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Contracted Universities</span>
+              <span class="traction-val">24 Campuses</span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Student NPS Score</span>
+              <span class="traction-val">+74 NPS</span>
+            </div>
+          </div>
+
+          <div class="funding-ask-bar">
+            <div class="ask-info">
+              <span class="ask-label">Funding Ask</span>
+              <span class="ask-amount">Raising $1.4M Seed</span>
+            </div>
+            <div class="ask-terms">
+              <span>$10.5M Post-Money</span>
+              Y-Combinator SAFE
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="#modal-praxis" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Pitch &amp; Modeler
+          </a>
+          <a href="#investor-registration" class="btn btn-primary btn-sm">
+            Invest in Deal
+          </a>
+        </div>
+      </article>
+
+      <!-- CARD 10: EDTECH - MENTORGRAPH -->
+      <article class="startup-card cat-edtech">
+        <div>
+          <div class="card-top">
+            <div class="brand-meta">
+              <div class="startup-logo logo-edtech">MG</div>
+              <div>
+                <h3 class="startup-name">MentorGraph</h3>
+                <span class="startup-cohort">Batch W26 &bull; London, UK</span>
+              </div>
+            </div>
+            <span class="category-tag tag-edtech">EdTech</span>
+          </div>
+
+          <div class="problem-box">
+            <div class="problem-label">Problem Summary</div>
+            <p class="problem-text">
+              Over 60% of students struggle with STEM subjects due to one-size-fits-all classroom pacing; 1-on-1 human tutoring at $60/hr remains inaccessible to 92% of households.
+            </p>
+          </div>
+
+          <div class="traction-grid">
+            <div class="traction-item">
+              <span class="traction-label">Monthly Run Rate</span>
+              <span class="traction-val">$61,500 <span class="metric-unit">MRR</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Paid Subscriber Growth</span>
+              <span class="traction-val">+41.2% <span class="metric-unit">MoM</span></span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">Active Learners</span>
+              <span class="traction-val">34,000+</span>
+            </div>
+            <div class="traction-item">
+              <span class="traction-label">LTV to CAC Ratio</span>
+              <span class="traction-val">4.8x LTV/CAC</span>
+            </div>
+          </div>
+
+          <div class="funding-ask-bar">
+            <div class="ask-info">
+              <span class="ask-label">Funding Ask</span>
+              <span class="ask-amount">Raising $1.1M Seed</span>
+            </div>
+            <div class="ask-terms">
+              <span>$8.5M Valuation Cap</span>
+              SAFE 15% Discount
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <a href="#modal-mentorgraph" class="btn btn-outline btn-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+            Pitch &amp; Modeler
+          </a>
+          <a href="#investor-registration" class="btn btn-primary btn-sm">
+            Invest in Deal
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONFIDENTIAL PITCH DECK & FINANCIAL MODELER LINK ACCESS GATE
+       Interactive Gate System with Lock/Unlock State (100% Pure CSS)
+       ========================================================================== -->
+  <section class="data-gate-section" id="data-gate">
+    <div class="container">
+      
+      <div class="gate-card-wrapper">
+        <!-- Pure CSS Checkbox Gate Controller inside wrapper as sibling to banner & vault -->
+        <input type="checkbox" id="nda-gate-toggle" class="gate-toggle-input">
+
+        <div class="section-header" style="margin-bottom: 1.5rem;">
+          <span class="section-tag">Institutional Due Diligence</span>
+          <h2 class="section-title">Confidential Pitch Deck &amp; Financial Modeler Gate</h2>
+          <p class="section-desc">
+            In compliance with SEC Reg D 506(c), detailed 24-slide pitch decks, 3-year DCF projection models, and cap tables are protected by a bilateral non-disclosure agreement.
+          </p>
+        </div>
+
+        <!-- Interactive Gate Status Banner with Switchable Label -->
+        <div class="gate-status-banner">
+          <div class="gate-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <span class="status-locked-text">Security Gate: RESTRICTED &bull; Bilateral NDA &amp; Accreditation Required</span>
+            <span class="status-unlocked-text">Security Gate: AUTHORIZED &bull; Deal Room Access Granted &bull; Diligence Live</span>
+          </div>
+
+          <label for="nda-gate-toggle" class="gate-toggle-btn">
+            <span class="status-locked-text">&#128275; Simulate Fast-Track Unlock (Toggle Gate)</span>
+            <span class="status-unlocked-text">&#128274; Re-lock Diligence Gate</span>
+          </label>
+        </div>
+
+        <!-- Diligence Vault Grid with Blur-State CSS Simulation -->
+        <div class="data-vault-grid">
+          
+          <!-- Vault Item 1: Pitch Decks -->
+          <div class="vault-item">
+            <div>
+              <div class="vault-item-header">
+                <div class="vault-icon icon-deck">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                </div>
+                <div class="vault-file-meta">
+                  <h4>Cohort W26 Master Decks</h4>
+                  <p>10 Pitch Presentations &bull; PDF Bundle (42 MB)</p>
+                </div>
+              </div>
+              <div class="vault-item-body vault-content-blur">
+                Complete unredacted investor presentations featuring unit economics, team resumes, customer validation case studies, and product roadmaps for all 10 ventures.
+              </div>
+            </div>
+
+            <div>
+              <div class="vault-lock-overlay">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Gated &bull; Sign NDA Below to Reveal
+              </div>
+              <div class="vault-unlocked-actions">
+                <a href="#modal-paymesh" class="btn btn-sm btn-primary" style="flex:1;">View PayMesh Deck</a>
+                <a href="#modal-synthetix" class="btn btn-sm btn-outline" style="flex:1;">View Synthetix</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vault Item 2: Financial Modeler -->
+          <div class="vault-item">
+            <div>
+              <div class="vault-item-header">
+                <div class="vault-icon icon-model">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </div>
+                <div class="vault-file-meta">
+                  <h4>3-Year Dynamic DCF Modeler</h4>
+                  <p>Cloud Spreadsheet &bull; Excel &amp; Sheets (18 MB)</p>
+                </div>
+              </div>
+              <div class="vault-item-body vault-content-blur">
+                Granular sensitivity tables, headcount projections, hiring schedule, CAC payback curves, burn multiple, and gross margin evolution across Base, Bull, and Bear scenarios.
+              </div>
+            </div>
+
+            <div>
+              <div class="vault-lock-overlay">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Gated &bull; Sign NDA Below to Reveal
+              </div>
+              <div class="vault-unlocked-actions">
+                <a href="#modal-paymesh" class="btn btn-sm btn-primary" style="flex:1;">Inspect Modelers</a>
+                <a href="#investor-registration" class="btn btn-sm btn-outline" style="flex:1;">Download XLSX</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vault Item 3: Cap Table & Dilution -->
+          <div class="vault-item">
+            <div>
+              <div class="vault-item-header">
+                <div class="vault-icon icon-cap">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg>
+                </div>
+                <div class="vault-file-meta">
+                  <h4>Cap Tables &amp; Option Pools</h4>
+                  <p>Carta / Pulley Export &bull; PDF/CSV</p>
+                </div>
+              </div>
+              <div class="vault-item-body vault-content-blur">
+                Fully diluted share counts, founder vesting schedules, unallocated ESOP reserve (10-15%), existing angel SAFE notes, and post-seed ownership projections.
+              </div>
+            </div>
+
+            <div>
+              <div class="vault-lock-overlay">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Gated &bull; Sign NDA Below to Reveal
+              </div>
+              <div class="vault-unlocked-actions">
+                <a href="#modal-paymesh" class="btn btn-sm btn-primary" style="flex:1;">View Cap Table</a>
+                <a href="#investor-registration" class="btn btn-sm btn-outline" style="flex:1;">Request Carta</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vault Item 4: Legal & Form C -->
+          <div class="vault-item">
+            <div>
+              <div class="vault-item-header">
+                <div class="vault-icon icon-term">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                </div>
+                <div class="vault-file-meta">
+                  <h4>Standard YC SAFE &amp; Side Letters</h4>
+                  <p>Legal Suite &bull; NVCA Compatible</p>
+                </div>
+              </div>
+              <div class="vault-item-body vault-content-blur">
+                Pre-vetted standard post-money SAFE documents, pro-rata rights side-letter templates for check sizes &ge; $100k, and certificate of incorporation files.
+              </div>
+            </div>
+
+            <div>
+              <div class="vault-lock-overlay">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Gated &bull; Sign NDA Below to Reveal
+              </div>
+              <div class="vault-unlocked-actions">
+                <a href="#investor-registration" class="btn btn-sm btn-primary" style="flex:1;">Sign SAFE Note</a>
+                <a href="#investor-registration" class="btn btn-sm btn-outline" style="flex:1;">Wire Instructions</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       ACCREDITED INVESTOR REGISTRATION & DEAL SYSTEM
+       Comprehensive Form with Fund Name, Check Size Preference, & NDA
+       ========================================================================== -->
+  <section class="investor-reg-section" id="investor-registration">
+    <div class="container">
+
+      <!-- Form Submission CSS State Trigger -->
+      <input type="checkbox" id="form-submitted" style="display:none;">
+
+      <div class="reg-card">
+        <div class="section-header" style="text-align: center; margin-bottom: 2rem;">
+          <span class="section-tag">Institutional Deal Syndicate</span>
+          <h2 class="section-title">Accredited Investor Registration &amp; Deal Allocation</h2>
+          <p class="section-desc" style="margin: 0 auto;">
+            Register your investment entity, select your check size preference, and execute the standard non-disclosure agreement to secure immediate syndicate allocations.
+          </p>
+        </div>
+
+        <!-- Pure HTML Form -->
+        <form action="#form-submitted" method="GET">
+
+          <div class="form-grid">
+            
+            <!-- Full Name -->
+            <div class="form-group">
+              <label class="form-label" for="inv-name">
+                Full Legal Name <span class="req">*</span>
+              </label>
+              <input type="text" id="inv-name" class="form-input" placeholder="e.g. Alexandra Vance, Partner" required>
+            </div>
+
+            <!-- Email Address -->
+            <div class="form-group">
+              <label class="form-label" for="inv-email">
+                Institutional Email Address <span class="req">*</span>
+              </label>
+              <input type="email" id="inv-email" class="form-input" placeholder="e.g. alexandra@sequoiacap.com" required>
+            </div>
+
+            <!-- Investment Fund / Firm Name -->
+            <div class="form-group">
+              <label class="form-label" for="inv-fund">
+                Investment Fund / Firm Name <span class="req">*</span>
+              </label>
+              <input type="text" id="inv-fund" class="form-input" placeholder="e.g. Horizon Ventures / Vance Family Office / Angel" required>
+            </div>
+
+            <!-- Investor Classification Type -->
+            <div class="form-group">
+              <label class="form-label" for="inv-type">
+                Accredited Investor Category <span class="req">*</span>
+              </label>
+              <select id="inv-type" class="form-select" required>
+                <option value="" disabled selected>Select accreditation type...</option>
+                <option value="vc">Institutional Venture Capital Fund ($25M+ AUM)</option>
+                <option value="fo">Single / Multi Family Office</option>
+                <option value="corp">Corporate Venture Capital (CVC)</option>
+                <option value="angel">Accredited Individual Angel (SEC Net Worth &gt; $1M)</option>
+                <option value="syndicate">Syndicate Lead / SPV Organizer</option>
+              </select>
+            </div>
+
+            <!-- Sector Interest Preferences -->
+            <div class="form-group full-width">
+              <label class="form-label">
+                Target Sectors of Interest (Select All That Apply)
+              </label>
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.25rem;">
+                <label class="btn btn-sm btn-outline" style="cursor: pointer;">
+                  <input type="checkbox" name="sector" value="fintech" checked style="margin-right: 0.35rem;"> FinTech
+                </label>
+                <label class="btn btn-sm btn-outline" style="cursor: pointer;">
+                  <input type="checkbox" name="sector" value="healthtech" checked style="margin-right: 0.35rem;"> HealthTech
+                </label>
+                <label class="btn btn-sm btn-outline" style="cursor: pointer;">
+                  <input type="checkbox" name="sector" value="aisaap" checked style="margin-right: 0.35rem;"> AI / SaaS
+                </label>
+                <label class="btn btn-sm btn-outline" style="cursor: pointer;">
+                  <input type="checkbox" name="sector" value="cleantech" checked style="margin-right: 0.35rem;"> CleanTech
+                </label>
+                <label class="btn btn-sm btn-outline" style="cursor: pointer;">
+                  <input type="checkbox" name="sector" value="edtech" checked style="margin-right: 0.35rem;"> EdTech
+                </label>
+              </div>
+            </div>
+
+            <!-- Check Size Preference Grid -->
+            <div class="form-group full-width">
+              <label class="form-label">
+                Typical Check Size Preference Per Deal <span class="req">*</span>
+              </label>
+              <div class="check-sizes-grid">
+                
+                <label class="check-size-option">
+                  <input type="radio" name="check-size" value="10k-25k">
+                  <div class="check-size-label">
+                    <span class="tier-amount">$10k - $25k</span>
+                    <span class="tier-desc">Syndicate Member</span>
+                  </div>
+                </label>
+
+                <label class="check-size-option">
+                  <input type="radio" name="check-size" value="25k-50k">
+                  <div class="check-size-label">
+                    <span class="tier-amount">$25k - $50k</span>
+                    <span class="tier-desc">Angel Participant</span>
+                  </div>
+                </label>
+
+                <label class="check-size-option">
+                  <input type="radio" name="check-size" value="50k-100k" checked>
+                  <div class="check-size-label">
+                    <span class="tier-amount">$50k - $100k</span>
+                    <span class="tier-desc">Major Angel / FO</span>
+                  </div>
+                </label>
+
+                <label class="check-size-option">
+                  <input type="radio" name="check-size" value="100k-250k">
+                  <div class="check-size-label">
+                    <span class="tier-amount">$100k - $250k</span>
+                    <span class="tier-desc">Co-Lead Ticket</span>
+                  </div>
+                </label>
+
+                <label class="check-size-option">
+                  <input type="radio" name="check-size" value="500k-plus">
+                  <div class="check-size-label">
+                    <span class="tier-amount">$500k+</span>
+                    <span class="tier-desc">Lead Institutional</span>
+                  </div>
+                </label>
+
+              </div>
+            </div>
+
+            <!-- Notes & Direct Founder Introductions -->
+            <div class="form-group full-width">
+              <label class="form-label" for="inv-notes">
+                Specific Startups You Want 1-on-1 Founder Introductions With
+              </label>
+              <textarea id="inv-notes" class="form-textarea" rows="2" placeholder="e.g. Interested in leading PayMesh Seed and taking a $50k allocation in Synthetix Workflows..."></textarea>
+            </div>
+
+          </div>
+
+          <!-- Bilateral Non-Disclosure Agreement Accordion (<details> / <summary>) -->
+          <div class="nda-terms-card">
+            <details class="nda-details" open>
+              <summary>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                Confidential Bilateral Non-Disclosure &amp; Non-Circumvent Terms (Click to expand)
+              </summary>
+              <div class="nda-body">
+                <strong>1. Confidential Information:</strong> Recipient acknowledges that all pitch decks, forward-looking financial modelers, cap table summaries, source architecture briefs, and trade secrets presented through the VenturePulse Demo Day portal constitute proprietary confidential information.<br><br>
+                <strong>2. Standard of Care:</strong> The Recipient shall maintain strict confidentiality and shall not disclose or forward any materials to third parties, competitors, or press without express written authorization from the startup's founding team.<br><br>
+                <strong>3. Regulatory Compliance:</strong> The Investor certifies under penalty of perjury that they qualify as an "accredited investor" within the meaning of Rule 501 of Regulation D promulgated under the U.S. Securities Act of 1933.
+              </div>
+            </details>
+          </div>
+
+          <!-- Checkbox Agreements -->
+          <label class="checkbox-field">
+            <input type="checkbox" required>
+            <span>
+              I certify that I am an <strong>Accredited Investor</strong> under SEC Regulation D and represent the named investment fund / entity.
+            </span>
+          </label>
+
+          <label class="checkbox-field">
+            <input type="checkbox" required>
+            <span>
+              I have read, agree to, and execute the <strong>Bilateral Non-Disclosure Agreement (NDA)</strong> and agree not to distribute proprietary pitch decks or financial models.
+            </span>
+          </label>
+
+          <!-- Form Action Button -->
+          <div style="margin-top: 1.5rem;">
+            <label for="form-submitted" class="btn btn-primary form-submit-btn" style="width: 100%; padding: 0.9rem; font-size: 1rem; cursor: pointer; text-align: center;">
+              Submit Accreditation &amp; Execute NDA Agreement
+            </label>
+          </div>
+
+          <!-- Submission Feedback Bar -->
+          <div class="submission-feedback-bar">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            <div>
+              <strong>Accreditation Approved &amp; NDA Counter-Signed!</strong>
+              <div style="font-size: 0.8rem; opacity: 0.9;">
+                Your diligence access token has been generated. Scroll up to the <a href="#data-gate" style="text-decoration: underline; font-weight:700;">Confidential Vault</a> to review unredacted models and download the master pitch decks.
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       DILIGENCE FAQ ACCORDION SECTION
+       ========================================================================== -->
+  <section class="container" id="faq" style="margin-bottom: 5rem;">
+    <div class="section-header" style="text-align: center;">
+      <span class="section-tag">Frequently Asked Questions</span>
+      <h2 class="section-title">Demo Day &amp; Syndicate Deal System FAQ</h2>
+      <p class="section-desc" style="margin: 0 auto;">
+        Key details regarding investment mechanics, deal allocation rights, and SAFE structures.
+      </p>
+    </div>
+
+    <div style="max-width: 820px; margin: 0 auto; display: flex; flex-direction: column; gap: 1rem;">
+      
+      <details class="nda-terms-card" style="padding: 1.25rem;">
+        <summary style="font-weight: 700; color: var(--text-main); font-size: 1rem; cursor: pointer;">
+          How are deal allocations awarded when a round is oversubscribed?
+        </summary>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.85rem; line-height: 1.6;">
+          Allocations are awarded based on time-stamped registration priority and strategic value-add (such as lead capability, domain expertise, customer introductions, or follow-on commitment). The syndicate lead and founders review requests within 48 hours of Demo Day closure.
+        </p>
+      </details>
+
+      <details class="nda-terms-card" style="padding: 1.25rem;">
+        <summary style="font-weight: 700; color: var(--text-main); font-size: 1rem; cursor: pointer;">
+          What standard investment instruments are used by graduating startups?
+        </summary>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.85rem; line-height: 1.6;">
+          All companies utilize standard Y-Combinator Post-Money SAFEs (Simple Agreement for Future Equity) with Valuation Caps or priced equity rounds with NVCA-compliant documentation, protecting early investors with standardized pro-rata and information rights.
+        </p>
+      </details>
+
+      <details class="nda-terms-card" style="padding: 1.25rem;">
+        <summary style="font-weight: 700; color: var(--text-main); font-size: 1rem; cursor: pointer;">
+          How do I arrange a private 1-on-1 diligence meeting with the founders?
+        </summary>
+        <p style="font-size: 0.88rem; color: var(--text-muted); margin-top: 0.85rem; line-height: 1.6;">
+          Once your accredited investor registration is submitted with your check size preference, our partner desk automatically provisions your Calendly access to schedule a direct 30-minute founder deep-dive.
+        </p>
+      </details>
+
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PURE CSS INTERACTIVE MODALS (VIA :target PSEUDO-CLASS)
+       Allows full pitch deck slide review and 3-year DCF financial model tables!
+       ========================================================================== -->
+
+  <!-- MODAL 1: PAYMESH PITCH DECK & FINANCIAL MODELER -->
+  <div id="modal-paymesh" class="modal-overlay">
+    <a href="#showcase" class="modal-backdrop-close" aria-label="Close Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="startup-logo logo-fintech" style="width:36px; height:36px; font-size:0.9rem;">PM</div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; font-family: var(--font-serif);">PayMesh Global &bull; Deck &amp; Financial Modeler</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Raising $2.0M Seed &bull; $14M Cap &bull; SEC Reg D 506(c)</span>
+          </div>
+        </div>
+        <a href="#showcase" class="modal-close" title="Close Modal">&times;</a>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- Pitch Deck Slide Frame -->
+        <div class="deck-slides-preview">
+          <div class="deck-slide-frame">
+            <span style="font-size: 0.7rem; color: var(--text-dim); font-weight: 600; font-family: var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase;">
+              SLIDE 04 // TRACTION &amp; UNIT ECONOMICS
+            </span>
+            <div class="deck-slide-title">38.5% MoM Gross Volume Acceleration</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 500px;">
+              PayMesh has processed over $28M in cumulative annualized cross-border volume across 142 multinational enterprise clients.
+            </p>
+
+            <div class="deck-slide-metrics-row">
+              <div class="slide-metric">
+                <div class="slide-metric-val">$118.5K</div>
+                <div class="slide-metric-lbl">Current MRR</div>
+              </div>
+              <div class="slide-metric">
+                <div class="slide-metric-val">82%</div>
+                <div class="slide-metric-lbl">Gross Margin</div>
+              </div>
+              <div class="slide-metric">
+                <div class="slide-metric-val">1.2%</div>
+                <div class="slide-metric-lbl">Blended Take Rate</div>
+              </div>
+              <div class="slide-metric">
+                <div class="slide-metric-val">6.4x</div>
+                <div class="slide-metric-lbl">LTV : CAC</div>
+              </div>
+            </div>
+          </div>
+          <div style="font-size: 0.72rem; color: var(--text-dim); margin-top: 0.5rem; font-family: var(--font-mono);">
+            Pitch Deck Slide 4 of 22 &bull; Confidential &bull; Do Not Duplicate
+          </div>
+        </div>
+
+        <!-- 3-Year Pro Forma Financial Modeler -->
+        <h4 style="font-size: 0.95rem; font-weight: 600; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between;">
+          <span>3-Year Audited Pro Forma Financial Modeler</span>
+          <span style="font-size: 0.72rem; font-family: var(--font-mono); color: var(--text-muted);">&#10003; Audited by Grant Thornton</span>
+        </h4>
+
+        <div style="overflow-x: auto;">
+          <table class="modeler-table">
+            <thead>
+              <tr>
+                <th>Financial Metric (USD)</th>
+                <th>2025 (Actual)</th>
+                <th>2026 (Projected)</th>
+                <th>2027 (Projected)</th>
+                <th>2028 (Target)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Total Transaction Volume (TPV)</td>
+                <td>$28,500,000</td>
+                <td>$98,000,000</td>
+                <td>$280,000,000</td>
+                <td>$740,000,000</td>
+              </tr>
+              <tr>
+                <td>Annual Recurring Revenue (ARR)</td>
+                <td>$1,422,000</td>
+                <td>$4,900,000</td>
+                <td>$14,200,000</td>
+                <td>$36,500,000</td>
+              </tr>
+              <tr>
+                <td>Gross Profit Margin %</td>
+                <td>78.4%</td>
+                <td>82.1%</td>
+                <td>84.5%</td>
+                <td>86.0%</td>
+              </tr>
+              <tr>
+                <td>Operating Expenses (OpEx)</td>
+                <td>($1,850,000)</td>
+                <td>($3,600,000)</td>
+                <td>($8,400,000)</td>
+                <td>($18,200,000)</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>Net Operating Income / (Burn)</td>
+                <td>($735,000)</td>
+                <td>+$422,800</td>
+                <td>+$3,599,000</td>
+                <td>+$13,190,000</td>
+              </tr>
+              <tr>
+                <td>Runway With $2.0M Seed</td>
+                <td>14 Months</td>
+                <td>Cash Flow Positive</td>
+                <td>Self-Sustaining</td>
+                <td>Pre-IPO Stage</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: flex-end;">
+          <a href="#investor-registration" class="btn btn-primary">
+            Request $50k+ Allocation in PayMesh
+          </a>
+          <a href="#showcase" class="btn btn-outline">Close Preview</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: SYNTHETIX WORKFLOWS MODAL -->
+  <div id="modal-synthetix" class="modal-overlay">
+    <a href="#showcase" class="modal-backdrop-close" aria-label="Close Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="startup-logo logo-ai" style="width:36px; height:36px; font-size:0.9rem;">SW</div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 700; font-family: var(--font-serif);">Synthetix Workflows &bull; Deck &amp; Modeler</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Raising $3.0M Seed &bull; $22M Cap &bull; Tier-1 Lead Committed</span>
+          </div>
+        </div>
+        <a href="#showcase" class="modal-close" title="Close Modal">&times;</a>
+      </div>
+
+      <div class="modal-body">
+        <div class="deck-slides-preview">
+          <div class="deck-slide-frame">
+            <span style="font-size: 0.7rem; color: var(--text-dim); font-weight: 600; font-family: var(--font-mono); letter-spacing: 0.08em; text-transform: uppercase;">
+              SLIDE 07 // ENTERPRISE PIPELINE &amp; DEFICIT
+            </span>
+            <div class="deck-slide-title">Zero-Hallucination Agent Infrastructure</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted); max-width: 500px;">
+              Synthetix allows Fortune 500 risk teams to sandbox, audit, and orchestrate production LLM swarms with mathematical determinism guarantees.
+            </p>
+
+            <div class="deck-slide-metrics-row">
+              <div class="slide-metric">
+                <div class="slide-metric-val">$145.0K</div>
+                <div class="slide-metric-lbl">Current MRR</div>
+              </div>
+              <div class="slide-metric">
+                <div class="slide-metric-val">+46.2%</div>
+                <div class="slide-metric-lbl">MoM Growth</div>
+              </div>
+              <div class="slide-metric">
+                <div class="slide-metric-val">$64K</div>
+                <div class="slide-metric-lbl">Average ACV</div>
+              </div>
+              <div class="slide-metric">
+                <div class="slide-metric-val">142%</div>
+                <div class="slide-metric-lbl">Net Retention</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem;">Synthetix ARR &amp; Burn Projection</h4>
+        <div style="overflow-x: auto;">
+          <table class="modeler-table">
+            <thead>
+              <tr>
+                <th>Financial Item</th>
+                <th>Q1 2026</th>
+                <th>Q2 2026</th>
+                <th>Q3 2026</th>
+                <th>Q4 2026 (Target)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Enterprise Customers</td>
+                <td>28</td>
+                <td>46</td>
+                <td>74</td>
+                <td>115</td>
+              </tr>
+              <tr>
+                <td>Annual Contract Run Rate (ARR)</td>
+                <td>$1.74M</td>
+                <td>$2.94M</td>
+                <td>$4.73M</td>
+                <td>$7.36M</td>
+              </tr>
+              <tr class="highlight-row">
+                <td>Net Burn Rate / Month</td>
+                <td>($45,000)</td>
+                <td>($38,000)</td>
+                <td>($12,000)</td>
+                <td>+$34,000 (Cash flow positive)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: flex-end;">
+          <a href="#investor-registration" class="btn btn-primary">
+            Request Syndicate Allocation in Synthetix
+          </a>
+          <a href="#showcase" class="btn btn-outline">Close Preview</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GENERIC MODAL ROUTE FOR ALL OTHER STARTUPS -->
+  <div id="modal-ledgerpulse" class="modal-overlay">
+    <a href="#showcase" class="modal-backdrop-close" aria-label="Close Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="startup-logo logo-fintech" style="width:36px; height:36px; font-size:0.9rem;">LP</div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 600; font-family: var(--font-serif);">LedgerPulse &bull; Pitch Deck &amp; Modeler</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Raising $1.5M Seed &bull; $11M Valuation Cap</span>
+          </div>
+        </div>
+        <a href="#showcase" class="modal-close">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-body); margin-bottom:1rem; font-size: 0.9rem;">Automated Treasury Management &amp; Yield Optimization for Series A-C Startups. $84M AUM monitored across 4 partner banks.</p>
+        <div class="funding-ask-bar">
+          <div class="ask-info">
+            <span class="ask-label">Funding Ask</span>
+            <span class="ask-amount">Raising $1.5M Seed</span>
+          </div>
+          <div class="ask-terms">
+            <span>$11M Valuation Cap</span>
+            20% Discount SAFE
+          </div>
+        </div>
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: flex-end;">
+          <a href="#investor-registration" class="btn btn-primary">Request Allocation</a>
+          <a href="#showcase" class="btn btn-outline">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-omnigenetics" class="modal-overlay">
+    <a href="#showcase" class="modal-backdrop-close" aria-label="Close Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="startup-logo logo-health" style="width:36px; height:36px; font-size:0.9rem;">OG</div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 600; font-family: var(--font-serif);">OmniGenetics AI &bull; Pitch Deck &amp; Clinical Modeler</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Raising $2.5M Seed+ &bull; $18M Post-Money</span>
+          </div>
+        </div>
+        <a href="#showcase" class="modal-close">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-body); margin-bottom:1rem; font-size: 0.9rem;">AI-powered liquid biopsy detection for early-stage oncology mutations. 19 active hospital network trials.</p>
+        <div class="funding-ask-bar">
+          <div class="ask-info">
+            <span class="ask-label">Funding Ask</span>
+            <span class="ask-amount">Raising $2.5M Seed+</span>
+          </div>
+          <div class="ask-terms">
+            <span>$18M Valuation</span>
+            Priced Preferred Stock
+          </div>
+        </div>
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: flex-end;">
+          <a href="#investor-registration" class="btn btn-primary">Request Allocation</a>
+          <a href="#showcase" class="btn btn-outline">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-neurosync" class="modal-overlay">
+    <a href="#showcase" class="modal-backdrop-close" aria-label="Close Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="startup-logo logo-health" style="width:36px; height:36px; font-size:0.9rem;">NS</div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 600; font-family: var(--font-serif);">NeuroSync Bio &bull; Deck &amp; Modeler</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Raising $1.8M Seed &bull; $13M Cap</span>
+          </div>
+        </div>
+        <a href="#showcase" class="modal-close">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-body); margin-bottom:1rem; font-size: 0.9rem;">Continuous biometric monitoring for neurodegenerative conditions with FDA 510(k) pathway clearance.</p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: flex-end;">
+          <a href="#investor-registration" class="btn btn-primary">Invest in NeuroSync</a>
+          <a href="#showcase" class="btn btn-outline">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-codearmor" class="modal-overlay">
+    <a href="#showcase" class="modal-backdrop-close" aria-label="Close Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="startup-logo logo-ai" style="width:36px; height:36px; font-size:0.9rem;">CA</div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 600; font-family: var(--font-serif);">CodeArmor AI &bull; Deck &amp; Modeler</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Raising $1.6M Seed &bull; $12.5M Cap</span>
+          </div>
+        </div>
+        <a href="#showcase" class="modal-close">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-body); margin-bottom:1rem; font-size: 0.9rem;">Autonomous zero-day remediation engine with 6,400+ repositories covered and 99.4% precision.</p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: flex-end;">
+          <a href="#investor-registration" class="btn btn-primary">Invest in CodeArmor</a>
+          <a href="#showcase" class="btn btn-outline">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-terragrid" class="modal-overlay">
+    <a href="#showcase" class="modal-backdrop-close" aria-label="Close Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="startup-logo logo-clean" style="width:36px; height:36px; font-size:0.9rem;">TG</div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 600; font-family: var(--font-serif);">TerraGrid Energy &bull; Deck &amp; Modeler</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Raising $1.75M Seed &bull; $12M Cap</span>
+          </div>
+        </div>
+        <a href="#showcase" class="modal-close">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-body); margin-bottom:1rem; font-size: 0.9rem;">Solid-state modular energy storage for distributed renewable microgrids. $4.8M in signed pilot LoIs.</p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: flex-end;">
+          <a href="#investor-registration" class="btn btn-primary">Invest in TerraGrid</a>
+          <a href="#showcase" class="btn btn-outline">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-biocapture" class="modal-overlay">
+    <a href="#showcase" class="modal-backdrop-close" aria-label="Close Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="startup-logo logo-clean" style="width:36px; height:36px; font-size:0.9rem;">BC</div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 600; font-family: var(--font-serif);">BioCapture Materials &bull; Deck &amp; Modeler</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Raising $1.2M Seed &bull; $9M Cap</span>
+          </div>
+        </div>
+        <a href="#showcase" class="modal-close">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-body); margin-bottom:1rem; font-size: 0.9rem;">Carbon-negative industrial bioplastics from captured emissions. 6 commercial brand offtakers.</p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: flex-end;">
+          <a href="#investor-registration" class="btn btn-primary">Invest in BioCapture</a>
+          <a href="#showcase" class="btn btn-outline">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-praxis" class="modal-overlay">
+    <a href="#showcase" class="modal-backdrop-close" aria-label="Close Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="startup-logo logo-edtech" style="width:36px; height:36px; font-size:0.9rem;">PL</div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 600; font-family: var(--font-serif);">Praxis Labs AI &bull; Deck &amp; Modeler</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Raising $1.4M Seed &bull; $10.5M Cap</span>
+          </div>
+        </div>
+        <a href="#showcase" class="modal-close">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-body); margin-bottom:1rem; font-size: 0.9rem;">Simulated workplace residency and VR accreditation for engineering and healthcare students. 24 campuses.</p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: flex-end;">
+          <a href="#investor-registration" class="btn btn-primary">Invest in Praxis Labs</a>
+          <a href="#showcase" class="btn btn-outline">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-mentorgraph" class="modal-overlay">
+    <a href="#showcase" class="modal-backdrop-close" aria-label="Close Modal"></a>
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <div class="startup-logo logo-edtech" style="width:36px; height:36px; font-size:0.9rem;">MG</div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 600; font-family: var(--font-serif);">MentorGraph &bull; Deck &amp; Modeler</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Raising $1.1M Seed &bull; $8.5M Cap</span>
+          </div>
+        </div>
+        <a href="#showcase" class="modal-close">&times;</a>
+      </div>
+      <div class="modal-body">
+        <p style="color:var(--text-body); margin-bottom:1rem; font-size: 0.9rem;">Adaptive 1-on-1 AI STEM tutoring engine for K-12 and university learners. 34,000+ active learners.</p>
+        <div style="margin-top: 1.5rem; display: flex; gap: 0.85rem; justify-content: flex-end;">
+          <a href="#investor-registration" class="btn btn-primary">Invest in MentorGraph</a>
+          <a href="#showcase" class="btn btn-outline">Close</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER SECTION
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <div class="sec-disclaimer">
+        <strong>REGULATORY NOTICE &amp; ACCREDITED INVESTOR DISCLAIMER:</strong> This website is an informational deal room platform designed solely for accredited investors under Rule 501 of Regulation D promulgated under the Securities Act of 1933, as amended. It does not constitute an offer to sell or the solicitation of an offer to purchase securities in any jurisdiction in which such offer or solicitation is not authorized. Investments in early-stage startups involve significant illiquidity and high degree of financial risk. Past traction metrics (MRR, user growth %) are unaudited unless explicitly certified.
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand" style="margin-bottom: 0.85rem;">
+            <div class="brand-icon" style="width:28px; height:28px;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+            </div>
+            <div class="brand-text">VENTURE<span>PULSE</span></div>
+          </div>
+          <p style="font-size: 0.85rem; line-height: 1.6; max-width: 320px; color: var(--text-dim);">
+            Connecting world-class accelerator founders with accredited angel syndicates and venture capital partners through transparent due diligence and automated deal allocation.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cohort Sectors</h4>
+          <ul class="footer-links">
+            <li><a href="#cat-fintech">FinTech Showcase</a></li>
+            <li><a href="#cat-healthtech">HealthTech Showcase</a></li>
+            <li><a href="#cat-aisaap">AI &amp; Enterprise SaaS</a></li>
+            <li><a href="#cat-cleantech">CleanTech Solutions</a></li>
+            <li><a href="#cat-edtech">EdTech &amp; Learning</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Due Diligence</h4>
+          <ul class="footer-links">
+            <li><a href="#data-gate">Confidential Data Room</a></li>
+            <li><a href="#data-gate">Master Pitch Decks (PDF)</a></li>
+            <li><a href="#data-gate">3-Year DCF Modelers</a></li>
+            <li><a href="#investor-registration">Bilateral NDA Terms</a></li>
+            <li><a href="#investor-registration">Rule 506(c) Certification</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Investor Network</h4>
+          <ul class="footer-links">
+            <li><a href="#investor-registration">Apply for Accreditation</a></li>
+            <li><a href="#investor-registration">Syndicate SPV Terms</a></li>
+            <li><a href="#investor-registration">Check Size Tiers</a></li>
+            <li><a href="#faq">Investor FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 VenturePulse Syndicate LLC. Built purely with semantic HTML5 &amp; CSS3. Zero JavaScript.</div>
+        <div>SEC Rule 506(c) Compliant &bull; Encrypted Diligence Vault</div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
